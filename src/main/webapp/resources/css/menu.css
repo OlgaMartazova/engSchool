@@ -14,25 +14,77 @@
     list-style: none;
 }
 
+.navbar-nav {
+    display: flex;
+    flex-direction: column;
+}
+
+.navbar-row {
+    display: flex;
+    flex-direction: row;
+}
+
+.navigate-row-between {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.navigate {
+    padding-left: 0;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    list-style: none;
+}
+
+.new {
+    margin-bottom: -10px;
+    margin-top: -10px;
+}
+.navigate a {
+    border: none;
+    width: 80px;
+    height: 30px;
+    margin-right: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    background: #dddddd;
+    font-size: 15px;
+    color: #333;
+}
+
+.navigate a:hover {
+    background: orchid;
+}
+
 .nav a {
-    position: relative;
-    display: block;
-    color: white;
-    background-color: #139E95;
-    height: 40px;
-    margin-bottom: 10px;
-    border-radius: 50px;
-    text-decoration: none;
-    width: 150px;
+    border: none;
+    width: 164px;
+    height: 51px;
+    margin: auto;
+    margin-top: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    background: #333;
+    font-size: 15px;
+    color: #fff;
 
     /*box-shadow: 0 0 40px 20px rgba(255, 255, 255, 0.4);*/
     /*border: solid white 1px;*/
 }
 
 .nav a:hover{
-    color: #fff;
-    background-color: #449d44;
-    border-color: #398439;
+    background: orchid;
+}
+
+.nav a:active{
+    background: darkorchid;
 }
 
 .navbar-collapse {
@@ -70,6 +122,15 @@
     border-radius: 4px;
 }
 
+.title-nav {
+    font-size: 25px;
+    margin-bottom: 10px;
+    font-family: "Roboto Thin", sans-serif;
+    color: #333;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
 .sr-only {
     position: absolute;
     width: 1px;
@@ -85,4 +146,12 @@
     .navbar-toggle {
         display: none;
     }
+}
+
+.navbar-collapse-centre {
+    padding-right: 15px;
+    overflow-x: visible;
+    -webkit-overflow-scrolling: touch;
+    -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, .1);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, .1);
 }

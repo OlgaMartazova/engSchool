@@ -2,30 +2,36 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Sign In</title>
-    <link rel="stylesheet" href="/resources/css/style.css">
-    <link rel="stylesheet" href="/resources/css/sign_in.css">
-    <link rel="stylesheet" href="/resources/css/sign_up.css">
+    <link href="/resources/css/sign_up.css" rel="stylesheet">
+    <title>Sign Up</title>
 </head>
 <body>
-<div class="container">
-
-    <form class="form-center-content" method="post" action="/sign-in">
-        <div class="form-sign_up-heading">Sign in</div>
-        <label>
-            <input class="form-control" name="email" type="email" placeholder="Email">
-        </label>
-        <label>
-            <input class="form-control" name="password" type="password" placeholder="Password">
-        </label>
-        <input class="login-button" value="Log in" type="submit">
-        <div>
-            <h2 class="">No account?</h2>
-            <div>
-                <a href="/sign-up" class="button1">Sign up</a>
-            </div>
+<div class="wrapper">
+    <div class="inner">
+        <div class="image-holder">
+            <img src="https://static6.depositphotos.com/1000765/574/i/600/depositphotos_5741326-stock-photo-3d-small-positive-pose.jpg" alt="image">
         </div>
-    </form>
+        <form method="post" action="/sign-in">
+            <h3>Welcome</h3>
+            <div class="form-wrapper">
+                <input name="email" type="text" placeholder="Email Address" class="form-control">
+            </div>
+
+            <div class="form-wrapper">
+                <input name="password" type="password" placeholder="Password" class="form-control">
+            </div>
+            <button type="submit">
+                Log in
+            </button>
+
+
+            <div class="card-info">
+                <p>Don't have an account yet?
+                    <br><a href="/sign-up">Sign up</a>
+                </p>
+            </div>
+        </form>
+    </div>
 </div>
 </body>
 </html>

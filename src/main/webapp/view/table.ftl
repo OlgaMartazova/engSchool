@@ -10,6 +10,22 @@
     <link href="/resources/css/style.css" rel="stylesheet">
     <link href="/resources/css/menu.css" rel="stylesheet">
     <link href="/resources/css/profile.css" rel="stylesheet">
+
+    <style>
+        table {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+        td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+        tr:nth-child(even) {
+            background-color: #dddddd;
+        }
+    </style>
 </head>
 <body>
 
@@ -18,15 +34,14 @@
     <#include "menu.ftl">
 
     <div class="center-content">
-        <div class="container">
             <div class="title">
                 <#if user.role == "teacher">
-                    Студенты
+                    Students
                 <#else>
-                    Учителя
+                    Teachers
                 </#if>
             </div>
-            <table border="1" cellspacing="0" cellpadding="1">
+            <table>
                 <tr>
                 <th>Id</th>
                 <th>First name</th>
@@ -40,7 +55,6 @@
                     </tr>
                 </#forEach>
             </table>
-        </div>
     </div>
 </div>
 </body>

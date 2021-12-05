@@ -17,7 +17,7 @@ body {
 
 a{
     text-decoration: none;
-    color: black;
+    color: #333;
 }
 
 .center {
@@ -156,14 +156,23 @@ a{
 }
 
 .black_header_text {
-    color: black;
+    color: #333;
 }
 
 .title{
     font-size: 25px;
     margin-bottom: 10px;
+    font-family: "Roboto Thin", sans-serif;
+    color: #333;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border-bottom: 1px solid orchid;
 }
 
+.end {
+    text-align: center;
+    margin-bottom: 20px;
+}
 .container {
     margin: 30px;
 }
@@ -225,24 +234,22 @@ a{
 }
 
 .button_text{
-    margin-left: 15px;
-    padding-top: 7px;
-    font-size: 18px;
+    font-size: 15px;
+    color: #fff;
+    align-items: center;
+    justify-content: center;
 }
 
-.button1 {
-    padding: 6px 12px;
-    font-size: 14px;
-    font-weight: normal;
-    line-height: 1.42857143;
-    text-align: center;
-    cursor: pointer;
-    border: 1px solid transparent;
-    border-radius: 4px;
-    color: #fff;
-    background-color: #139E95;
-    text-decoration: none;
-    margin: 3px 2px 0 2px;
+.button-left {
+    margin-left: 250%;
+    margin-top: 15%;
+    width: 50%;
+    align-items: center;
+    justify-content: center;
+}
+
+.small {
+    font-size: 12px;
 }
 
 .input_green {
@@ -279,17 +286,31 @@ a{
 .divider{
     width: 100%;
     height: 2px;
-    margin-top: 15px;
-    margin-bottom: 15px;
-    background-color: #ccc0c0;
+    margin-bottom: 10px;
+    background-color: orchid;
+}
+
+.container-half {
+    width: 50%;
 }
 
 .light_blue{
     color: #4A90E2;
 }
 
-.text{
-    margin-bottom: 7px;
+.edit {
+    font-size: 20px;
+}
+.text-style{
+    margin-bottom: 4px;
+}
+
+.group {
+    margin-bottom: -15px;
+}
+
+.group-new {
+    margin-top: 20px;
 }
 
 .removeButton{
@@ -335,9 +356,15 @@ a{
 .white-container {
     background: white;
     border: solid 2px lightgray;
-    border-radius: 20px;
+    border-radius: 5px;
     padding: 10px;
     margin-bottom: 20px;
     overflow: hidden;
 }
 
+.h4 {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-family: "Roboto Thin", sans-serif;
+    font-size: 24px;
+}

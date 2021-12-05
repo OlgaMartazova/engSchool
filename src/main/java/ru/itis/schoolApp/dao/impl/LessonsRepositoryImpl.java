@@ -23,8 +23,8 @@ public class LessonsRepositoryImpl implements LessonsRepository {
     private final static String SQL_SELECT_ALL = "select lesson_id, author_id, created_at, content, subject, for_whom, user_id, first_name, last_name, email, password_hash, role, avatar_id from lessons left join users on lessons.author_id = users.user_id order by created_at desc";
     private final static String SQL_DELETE_BY_ID = "delete from posts where post_id = ?";
     private final static String SQL_SELECT_BY_AUTHOR_ID = "select lesson_id, author_id, created_at, content, subject, for_whom, user_id, first_name, last_name, email, password_hash, role, avatar_id from lessons left join users on lessons.author_id = users.user_id where users.user_id = ? order by created_at desc";
-    private static final String SQL_SELECT_BY_SUBJECT = "select lesson_id, author_id, created_at, content, subject, for_whom, user_id, first_name, last_name, email, password_hash, role, avatar_id from lessons left join users on lessons.author_id = users.user_id where lessons.subject = ?";
-    private final static String SQL_SELECT_BY_FOR_WHOM = "select lesson_id, author_id, created_at, content, subject, for_whom, user_id, first_name, last_name, email, password_hash, role, avatar_id from lessons left join users on lessons.author_id = users.user_id where lessons.for_whom = ?";
+    private static final String SQL_SELECT_BY_SUBJECT = "select lesson_id, author_id, created_at, content, subject, for_whom, user_id, first_name, last_name, email, password_hash, role, avatar_id from lessons left join users on lessons.author_id = users.user_id where lessons.subject = ? order by created_at desc";
+    private final static String SQL_SELECT_BY_FOR_WHOM = "select lesson_id, author_id, created_at, content, subject, for_whom, user_id, first_name, last_name, email, password_hash, role, avatar_id from lessons left join users on lessons.author_id = users.user_id where lessons.for_whom = ? order by created_at desc";
 
     private final RowMapper<Lesson> rowMapper = (row, rowNumber) ->
             Lesson.builder()

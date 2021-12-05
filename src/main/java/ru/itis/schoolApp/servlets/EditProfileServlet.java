@@ -28,7 +28,6 @@ public class EditProfileServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        System.out.println("я прошёл");
         request.getRequestDispatcher("edit_profile.ftl").forward(request, response);
     }
 
@@ -39,6 +38,7 @@ public class EditProfileServlet extends HttpServlet {
                 .lastName(request.getParameter("lastName"))
                 .role(request.getParameter("role"))
                 .build();
+
 
         HttpSession session = request.getSession(true);
         UserDto userDto = (UserDto) session.getAttribute("user");

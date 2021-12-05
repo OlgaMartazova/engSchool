@@ -55,7 +55,6 @@ public class CustomContextListener implements ServletContextListener {
         UsersRepository usersRepository = new UsersRepositoryImpl(dataSource);
         LessonsRepository lessonsRepository = new LessonsRepositoryImpl(dataSource);
         AvatarFilesRepository avatarFilesRepository = new AvatarFilesRepositoryImpl(dataSource);
-        AttachedFilesRepository attachedFilesRepository = new AttachedFilesRepositoryImpl(dataSource);
         ObjectMapper objectMapper = new ObjectMapper();
 
         PasswordEncoder passwordEncoder = new PasswordEncoderImpl();

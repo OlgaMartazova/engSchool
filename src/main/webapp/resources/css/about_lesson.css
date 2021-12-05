@@ -1,0 +1,28 @@
+.all{
+    display: flex;
+    flex-direction: row;
+    margin-top: 50px;
+    margin-left: 20%;
+}
+
+.info{ /*блок из аватара и информации*/
+    display: flex;
+    flex-direction: row;
+}
+
+.user-info{ /*блок из аватара и информации*/
+    display: flex;
+    flex-direction: column;
+}
+
+.title-teacher{ /*общий шаблон для заголовка*/
+    font-size: 24px;
+    font-weight: bold;
+}
+.prof{ /*заголовк профиля*/
+    margin-left: 26%;
+}
+
+.lesson-info{
+    margin-left: 10%;
+}

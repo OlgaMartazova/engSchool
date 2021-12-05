@@ -11,6 +11,7 @@
     <link href="/resources/css/style.css" rel="stylesheet">
     <link href="/resources/css/menu.css" rel="stylesheet">
     <link href="/resources/css/profile.css" rel="stylesheet">
+    <link href="/resources/css/sign_up.css" rel="stylesheet">
 
     <script src="/resources/js/update-avatar.js"></script>
     <script src="/resources/js/jquery.js"></script>
@@ -18,31 +19,35 @@
 </head>
 <body>
 
-<div class="container">
+<div>
 
     <#include "menu.ftl">
 
     <div class="center-content">
-        <div class="container">
-            <div class="title">Информация обо мне</div>
-            <div id="avatar" class="white-container">
+        <div>
+            <div class="title">About me</div>
+            <div class="info">
+                <div class="under-photo">
+                    <#if user.avatarId??>
+                        <img  id="image" class="image-holder" alt="IMAGE" src="/files/${user.avatarId}"/>
+                    <#else>
+                        <img  id="image" class="image-holder" alt="IMAGE" src="/no-avatar.png"/>
+                    </#if>
 
-                <#if user.avatarId??>
-                    <img class="user-avatar" id="image" alt="IMAGE" src="/files/${user.avatarId}"/>
-                <#else>
-                    <img class="user-avatar" id="image" alt="IMAGE" src="/no-avatar.png"/>
-                </#if>
+                    <div>
+                        <input id="file-input" type="file" name="name" style="display: none;" accept="image/png, image/gif, image/jpeg" onchange="uploadSelectedImage()"/>
+                        <button  value="Update avatar" onclick="updateAvatar()">Update avatar</button>
+                    </div>
+                </div>
 
-                <div>
-                    <form class="user-info-text" method="post" action="/edit">
-                        <label>First name
-                            <input name="firstName" type="text" value="${user.firstName}">
-                        </label>
-                        <label>Last name
-                            <input name="lastName" type="text" value="${user.lastName}">
-                        </label>
-                        <label for="role">Role</label>
-                        <select id="role" name="role">
+                <form class="user-info" method="post" action="/edit">
+                    <div class="form-group">
+                        <input name="firstName" type="text" placeholder="First Name" class="form-control" value="${user.firstName}">
+                        <input name="lastName" type="text" placeholder="Last Name" class="form-control" value="${user.lastName}">
+                    </div>
+
+                    <div class="form-wrapper">
+                        <select class="form-control" name="role">
                             <#if user.role == "teacher">
                                 <option value="teacher" selected>Teacher</option>
                                 <option value="student">Student</option>
@@ -51,19 +56,17 @@
                                 <option value="student" selected>Student</option>
                             </#if>
                         </select>
-                        <input class="save" type="submit" value="save">
-                    </form>
-
-                    <div id="edit avatar">
-                        <input id="file-input" type="file" name="name" style="display: none;" accept="image/png, image/gif, image/jpeg" onchange="uploadSelectedImage()"/>
-                        <button  value="Update avatar" onclick="updateAvatar()">Update avatar</button>
                     </div>
-                </div>
+                    <button type="submit">
+                        save
+                    </button>
+
+                    <div class="link">
+                         <a href="/profile">cancel</a>
+                    </div>
+                </form>
             </div>
         </div>
-    </div>
-    <div>
-        <a href="/profile" class="button1">cancel</a>
     </div>
 </div>
 </body>

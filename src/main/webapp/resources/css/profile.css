@@ -1,23 +1,47 @@
-.user-info{
-    font-size: 20px;
-    margin: 10px;
-    width: auto;
-}
-
-.user-avatar{
-    float: left;
-    margin-right: 20px;
-    margin-bottom: 20px;
-    width: 200px;
-    height: 200px;
-    object-fit: cover;
-    overflow: visible;
-    z-index: 500;
-    /*clip-path: polygon(50% 0%, 90% 20%, 100% 60%, 75% 100%, 25% 100%, 0% 60%, 10% 20%);*/
-    clip-path: circle(50.0% at 50% 50%);
-}
-
 .under-photo{
-    width: 80%;
-    margin-left: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.image-holder {
+    margin-top: 5px;
+    width: 360px;
+    height: 360px;
+    justify-content: center;
+    object-fit: cover;
+}
+
+.user-info{ /*блок информации*/
+    margin-left: 15px; /*отступ от авы*/
+}
+
+.info {
+    display: flex;
+    flex-direction: row;
+}
+.text{
+    color: grey;
+    font-family: "Roboto Thin", sans-serif;
+    text-transform: uppercase;
+    font-size: 17px;
+    margin-top: 0px;
+}
+.attr{
+    font-size: 22px;
+    border-bottom: 1px solid #333;
+    width: 100%;
+    padding: 5px 0;
+}
+
+.blue_text {
+    color: #4A90E2;
+    font-size: 17px;
+}
+
+.inner {
+    padding: 20px;
+    background: #fff;
+    max-width: 850px;
+    margin: auto;
+    display: flex;
 }

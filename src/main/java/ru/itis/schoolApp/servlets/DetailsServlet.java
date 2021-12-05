@@ -29,6 +29,7 @@ public class DetailsServlet extends HttpServlet {
         Long lessonId = Long.valueOf(request.getParameter("lessonId"));
         LessonDto lessonDto = lessonsService.getLesson(lessonId);
         UserDto teacher = lessonsService.getAuthor(lessonDto);
+        System.out.println(teacher.getFirstName());
         request.setAttribute("teacher", teacher);
         request.setAttribute("lesson", lessonDto);
         request.getRequestDispatcher("about_lesson.ftl").forward(request, response);
